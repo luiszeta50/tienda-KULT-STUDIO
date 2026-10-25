@@ -1,0 +1,198 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace !important;
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-between: space-between;
+    padding: 24px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   ESTRUCTURA Y DISEÑO EN COLUMNAS (GRID)
+   ========================================================================== */
+.main-container {
+    max-w: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-cols: 1fr;
+    gap: 40px;
+    align-items: start;
+    padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        grid-template-cols: 1fr 1fr; /* Divide la pantalla en dos columnas perfectas */
+    }
+}
+
+/* ==========================================================================
+   COMPONENTES Y TARJETAS ESTILO TERMINAL
+   ========================================================================== */
+.terminal-card {
+    background-color: #161616 !important;
+    border: 1px solid #27272a !important;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-card-box {
+    background-color: #161616 !important;
+    border: 1px solid #27272a !important;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 450px;
+}
+
+/* Campos de entrada (Inputs) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.terminal-input {
+    width: 100%;
+    background-color: #000000 !important;
+    border: 1px solid #27272a !important;
+    color: #e4e4e7 !important;
+    padding: 12px 12px 12px 35px;
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: none; /* Mantiene minúsculas en el correo */
+}
+
+.terminal-input:focus {
+    outline: none;
+    border-color: #ccff00 !important;
+    box-shadow: 0 0 8px rgba(204, 255, 0, 0.25);
+}
+
+/* ==========================================================================
+   BOTONES Y ELEMENTOS DE ACCIÓN
+   ========================================================================== */
+.btn-neon {
+    background-color: #ccff00 !important;
+    color: #000000 !important;
+    font-weight: 800;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s;
+}
+
+.btn-neon:hover {
+    background-color: #b5e200 !important;
+}
+
+.oauth-container {
+    display: grid;
+    grid-template-cols: 1fr 1fr;
+    gap: 16px;
+}
+
+.btn-oauth {
+    background-color: #000000 !important;
+    border: 1px solid #27272a !important;
+    color: #ffffff !important;
+    padding: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-oauth:hover {
+    background-color: #18181b !important;
+    border-color: #a1a1aa !important;
+}
+
+/* ==========================================================================
+   TEXTOS Y UTILIDADES DE COLOR
+   ========================================================================== */
+.text-neon { color: #ccff00 !important; }
+.text-gray { color: #888888 !important; }
+.text-dark-gray { color: #444444 !important; }
+
+.header-top, .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #555555;
+    border-color: #27272a;
+    padding: 15px 0;
+}
+
+.header-top { border-b: 1px solid #27272a; }
+.footer-bottom { border-t: 1px solid #27272a; margin-top: 30px; }
+
+.title-large {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.badge-online {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccff00;
+    box-shadow: 0 0 8px #ccff00;
+    display: inline-block;
+}
+
+.list-benefits {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: none;
+    color: #a1a1aa;
+}
