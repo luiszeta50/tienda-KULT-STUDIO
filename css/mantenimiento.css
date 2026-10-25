@@ -1,0 +1,75 @@
+/* ==========================================================================
+   KULT STUDIO - PANTALLA MANTENIMIENTO (COMPATIBLE CON TAILWIND)
+   ========================================================================== */
+
+/* Importación de fuentes Cyber/Terminal */
+@import url('https://googleapis.com');
+
+:root {
+    --neon-color: #CCFF00;
+    --dark-bg: #050505;
+    --border-color: #18181b; /* zinc-900 */
+}
+
+/* Tipografía y comportamiento base */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--dark-bg);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Fuentes estilo terminal para datos técnicos y pie de página */
+.mono-text {
+    font-family: 'Space Mono', monospace;
+}
+
+/* Efecto de estiramiento y espaciado para el título principal "MODO MANTENIMIENTO" */
+h1 {
+    font-stretch: expanded;
+    letter-spacing: -0.05em;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+/* Estilo y enfoque de los campos de texto del formulario */
+input[type="email"] {
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="email"]:focus {
+    border-color: #3f3f46 !important; /* zinc-700 */
+    background-color: #000000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.03);
+}
+
+/* Efectos interactivos y resplandor para el botón verde neón */
+button[type="submit"] {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 0 25px rgba(204, 255, 0, 0.5);
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Animación de pulso personalizada para el indicador de estado en vivo */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
+}
+
+/* Personalización de la selección de texto en pantalla */
+::selection {
+    background-color: var(--neon-color);
+    color: #000000;
+}

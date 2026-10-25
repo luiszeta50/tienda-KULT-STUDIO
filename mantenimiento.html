@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KULT STUDIO // SYSTEM OFFLINE</title>
+    <!-- CORREGIDO: CDN oficial para activar Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#CCFF00',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- CORREGIDO: Importación real de tipografías Cyber desde Google Fonts -->
+    <style>
+        @import url('https://googleapis.com');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .mono-text {
+            font-family: 'Space Mono', monospace;
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-white min-h-screen flex flex-col justify-between selection:bg-neon selection:text-black relative overflow-x-hidden">
+
+<!-- MARCA DE AGUA EN EL FONDO -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
+    <span class="text-[14vw] font-black text-zinc-950/40 tracking-tighter uppercase whitespace-nowrap">OFFLINE</span>
+</div>
+
+<!-- HEADER / BARRA DE ESTADO SUPERIOR -->
+<header class="border-b border-zinc-900 p-4 flex justify-between items-center text-[10px] tracking-widest mono-text relative z-10 bg-[#050505]/80 backdrop-blur-sm">
+    <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-1.5">
+            <span class="w-2 h-2 bg-zinc-700 rounded-full"></span>
+            <span class="text-zinc-500 font-bold uppercase">SISTEMA EN MANTENIMIENTO // PROTOCOLO OFFLINE</span>
+        </div>
+        <div class="hidden md:flex flex-col text-zinc-600 text-[9px] leading-tight border-l border-zinc-900 pl-4">
+            <span>KULT</span>
+            <span>STUDIO</span>
+            <span>// PROTOCOLO</span>
+            <span>SERVIDOR</span>
+        </div>
+    </div>
+    <div class="flex space-x-6 items-center">
+        <span class="text-zinc-500">LOC: BOG / MDE // COLOMBIA</span>
+        <span class="bg-red-950 text-red-400 border border-red-900/50 px-2 py-0.5 rounded font-bold uppercase tracking-normal">[ SYS_LOCK: ACTIVE ]</span>
+        <a href="mailto:soporte@kultstudio.co" class="hidden sm:inline text-zinc-500 hover:text-white transition-colors">CANAL EMERGENCIAS: <span class="text-neon underline">SOPORTE@KULTSTUDIO.CO</span></a>
+    </div>
+</header>
+
+<!-- SECCIÓN CENTRAL DE INFORMACIÓN -->
+<main class="flex-grow flex flex-col items-center justify-center px-4 py-16 relative z-10 max-w-4xl mx-auto w-full text-center space-y-10">
+
+    <!-- Textos principales -->
+    <div class="space-y-4">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9] text-white">
+            MODO<br>MANTENIMIENTO<br><span class="text-white">// SISTEMA</span> OFFLINE
+        </h1>
+        <p class="text-zinc-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed pt-2 font-normal">
+            Estamos optimizando los servidores y preparando el próximo Drop. Nuestra tienda online se reabrirá en breve con la nueva colección bajo nuevos parámetros de inventario serializado.
+        </p>
+    </div>
+
+    <!-- PANEL DE TELEMETRÍA (Agregado para cumplir con tu diseño exacto) -->
+    <div class="w-full max-w-2xl bg-zinc-950/90 border border-zinc-900 rounded text-left mono-text text-[11px] overflow-hidden shadow-2xl">
+        <div class="bg-zinc-900/50 px-4 py-2 text-[10px] text-zinc-500 border-b border-zinc-900 tracking-wider">
+            TELEMETRÍA // ESTADO DEL SERVIDOR KULT_NODE_01
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 p-4 text-zinc-400">
+            <div class="flex justify-between border-b border-zinc-900/50 pb-1">
+                <span>ESTADO OPERATIVO:</span>
+                <span class="text-neon font-bold">EN REVISIÓN TÉCNICA</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-900/50 pb-1">
+                <span>MOTIVO:</span>
+                <span class="text-white">DESPLIEGUE DROP 05</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-900/50 pb-1">
+                <span>ESTIMADO DE REAPERTURA:</span>
+                <span class="text-neon font-bold tracking-widest">02H : 45M : 12S</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-900/50 pb-1">
+                <span>SOPORTE DE PEDIDOS:</span>
+                <span class="text-white">SOPORTE@KULTSTUDIO.CO</span>
+            </div>
+        </div>
+        <div class="bg-zinc-900/30 px-4 py-2 flex justify-between text-[10px] text-zinc-500">
+            <span>LATENCIA NODO BOGOTÁ: 11ms</span>
+            <span class="text-neon">MODO PRIVADO ACTIVO</span>
+        </div>
+    </div>
+
+    <!-- REGISTRO DE NOTIFICACIÓN INMEDIATA -->
+    <div class="w-full max-w-xl bg-zinc-950/80 border border-zinc-900 rounded p-6 shadow-2xl mono-text space-y-4">
+        <div class="flex items-center justify-center space-x-2 text-[10px] text-zinc-400 uppercase tracking-wider">
+            <span>🔔</span>
+            <span>Notificación inmediata al abrir</span>
+        </div>
+        <p class="text-[10px] text-zinc-500 max-w-sm mx-auto leading-normal">
+            Ingresa tu correo para ser notificado de inmediato cuando la tienda y el próximo lanzamiento estén disponibles:
+        </p>
+
+        <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2">
+            <input type="email"
+                   placeholder="TU CORREO ELECTRÓNICO..."
+                   class="flex-grow bg-black border border-zinc-800 rounded px-4 py-3 text-white placeholder-zinc-700 text-xs tracking-wider uppercase focus:outline-none focus:border-zinc-700 transition-colors"
+                   required>
+            <button type="submit"
+                    class="bg-neon hover:bg-neon/90 text-black font-extrabold uppercase tracking-widest px-6 py-3 rounded text-xs transition-all whitespace-nowrap">
+                [ NOTIFICARME REAPERTURA ]
+            </button>
+        </form>
+    </div>
+
+</main>
+
+<!-- PIE DE PÁGINA / FOOTER DE SEGURIDAD -->
+<footer class="border-t border-zinc-900 p-4 flex justify-between items-center text-[10px] text-zinc-500 tracking-wider mono-text relative z-10 bg-[#050505]">
+    <span>© 2024 KULT STUDIO INC. TIENDA OFICIAL COLOMBIA // BOGOTÁ</span>
+    <div class="flex space-x-4 font-bold items-center">
+        <div class="flex items-center space-x-1.5 text-neon">
+            <span class="w-1.5 h-1.5 bg-neon rounded-full animate-pulse"></span>
+            <span class="uppercase">ESTADO: MANTENIMIENTO ACTIVO</span>
+        </div>
+        <span>•</span>
+        <span class="text-white bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 rounded text-[9px]">SHA-256 ENCRYPTED</span>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -3,9 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online ADSO</title>
+    <title>Iniciar Sesión // Kult Studio</title>
+    <!-- CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#ccff00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+        }
+        .terminal-card {
+            background-color: #121212;
+            border: 1px solid #27272a;
+        }
+        .terminal-input {
+            width: 100%;
+            background-color: #000000;
+            border: 1px solid #27272a;
+            color: #ffffff;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .terminal-input:focus {
+            border-color: #ccff00;
+            box-shadow: 0 0 10px rgba(204, 255, 0, 0.1);
+        }
+        .btn-neon {
+            background-color: #ccff00;
+            color: #000000;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.2s;
+        }
+        .btn-neon:hover {
+            background-color: #b3ff00;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.3);
+        }
+        .btn-oauth {
+            background-color: #16161a;
+            border: 1px solid #27272a;
+            color: #ffffff;
+            transition: all 0.2s;
+        }
+        .btn-oauth:hover {
+            border-color: #52525b;
+            background-color: #1f1f23;
+        }
+        .text-neon {
+            color: #ccff00;
+        }
+        .badge-online {
+            width: 6px;
+            height: 6px;
+            background-color: #ccff00;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #ccff00;
+        }
+    </style>
 </head>
-<body>
-    <p class="precio">$59.900</p>
-</body>
-</html>
+<body class="text-white min-h-screen flex flex-col justify-between p-4 md:p-8 uppercase select-none">
+
+<!-- CABECERA SUPERIOR -->
+<header class="flex justify-between items-center text-[11px] tracking-widest text-gray-500 border-b border-zinc-800 pb-3 mb-6">
+    <div class="flex items-center space-x-2">
+        <span class="bg-[#ccff00] text-black px-1.5 py-0.5 font-extrabold text-[10px]">KULT</span>
+        <span>STUDIO // LAB</span>
+    </div>
+    <div class="flex space-x-6">
+        <span>CUR: COP ($)</span>
+        <a href="#" class="text-neon lowercase">[ volver a la tienda ]</a>
+    </div>
+</header>
+
+<!-- CONTENEDOR PRINCIPAL (2 Columnas) -->
+<main class="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 my-auto items-start">
+
+    <!-- COLUMNA IZQUIERDA: MENSAJES E INFORMACIÓN -->
+    <section class="space-y-6">
+        <div class="flex justify-between text-[11px] tracking-wider text-gray-500">
+            <span class="text-neon">■ FASE // 04 . AUTH GATEWAY</span>
+            <span>BOG // MDE</span>
+        </div>
+
+        <div class="border-t border-zinc-800 pt-4">
+            <p class="text-neon text-[11px] tracking-widest font-bold mb-2">PROTOCOLO DE ACCESO // MIEMBROS KULT</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-none mb-4">
+                INICIAR<br>SESIÓN EN<br>KULT STUDIO
+            </h1>
+            <p class="text-gray-400 text-xs tracking-wide normal-case max-w-sm">
+                Identificación requerida para consultar tus compras y pedidos, seriales adquiridos y activaciones clandestinas en Colombia.
+            </p>
+        </div>
+
+        <!-- CONTENEDOR DE IMAGEN (FOTO OFICIAL) -->
+        <div class="terminal-card p-4 inline-block w-full max-w-[240px]">
+            <div class="w-full aspect-square bg-zinc-950 border border-zinc-800 flex items-center justify-center mb-3 overflow-hidden group">
+                <!-- Reemplaza 'ruta/de/tu/foto-oficial.jpg' por la ubicación de tu imagen local o URL -->
+                <img src="../img/image_16ab2a8f.jpg" alt="Colección Oficial" class="w-full h-full object-cover">
+
+            </div>
+            <p class="text-[10px] tracking-widest text-gray-400 font-bold">COLECCIÓN OFICIAL // 2024.BOG</p>
+        </div>
+
+        <!-- Beneficios de cuenta -->
+        <div class="terminal-card p-5 space-y-3 text-[11px] max-w-md normal-case">
+            <p class="text-neon font-bold tracking-wider uppercase">⊙ BENEFICIOS DE IDENTIFICACIÓN</p>
+            <ul class="space-y-3 text-gray-400">
+                <li><strong class="text-neon font-mono mr-1">01.</strong> Acceso prioritario 15 min antes a Drops limitados y cápsulas secretas.</li>
+                <li><strong class="text-neon font-mono mr-1">02.</strong> Historial de pedidos con rastreo sincronizado (Servientrega & Coordinadora).</li>
+                <li><strong class="text-neon font-mono mr-1">03.</strong> Libreta de direcciones urbanas guardadas en Colombia (BOG, MDE, CLO, BAQ).</li>
+                <li><strong class="text-neon font-mono mr-1">04.</strong> Descarga libre de publicaciones, fanzines digitales y stems de audio KULT.</li>
+            </ul>
+        </div>
+
+        <div class="text-[11px] text-gray-500 flex items-center space-x-2">
+            <span>ESTADO DE NODO</span>
+            <span class="badge-online animate-pulse"></span>
+            <span class="text-neon font-bold">• ONLINE (BOG-01)</span>
+        </div>
+    </section>
+
+    <!-- COLUMNA DERECHA: FORMULARIO DE ACCESO -->
+    <section class="terminal-card p-6 md:p-8 space-y-6">
+        <div class="flex justify-between items-center text-[10px] tracking-widest text-gray-500 border-b border-zinc-800 pb-2">
+            <span>TERMINAL // KULT-ID 2.4.9</span>
+            <div class="flex space-x-1">
+                <div class="w-1.5 h-1.5 bg-zinc-700"></div>
+                <div class="w-1.5 h-1.5 bg-zinc-700"></div>
+                <div class="w-1.5 h-1.5 bg-neon shadow-[0_0_6px_#ccff00]"></div>
+            </div>
+        </div>
+
+        <form class="space-y-5">
+            <!-- Bloque de Correo -->
+            <div>
+                <div class="flex justify-between text-[10px] font-bold tracking-wider mb-2">
+                    <label>IDENTIFICADOR / CORREO ELECTRÓNICO</label>
+                    <span class="text-gray-500">[COLOMBIA REG.]</span>
+                </div>
+                <div class="relative">
+                    <span class="absolute left-3 top-3 text-gray-500 text-xs font-mono">@</span>
+                    <input type="email" placeholder="usuario@correo.com" class="terminal-input px-8 py-2.5 text-xs lowercase" required>
+                </div>
+            </div>
+
+            <!-- Bloque de Contraseña -->
+            <div>
+                <div class="flex justify-between text-[10px] font-bold tracking-wider mb-2">
+                    <label>CONTRASEÑA CIFRADA</label>
+                    <a href="#" class="text-gray-500 hover:text-neon lowercase transition-colors">[recuperar clave]</a>
+                </div>
+                <div class="relative">
+                    <!-- Icono de candado estilizado en texto / unicode -->
+                    <span class="absolute left-3 top-2.5 text-gray-500 text-xs">🔒</span>
+                    <input type="password" placeholder="••••••••••••" class="terminal-input px-8 py-2.5 text-xs" required>
+                    <span class="absolute right-3 top-3 text-gray-500 text-[10px] cursor-pointer hover:text-white">👁</span>
+                </div>
+            </div>
+
+            <!-- Recordar Credenciales -->
+            <div class="flex items-center space-x-2 py-1">
+                <input type="checkbox" id="remember" class="accent-[#ccff00] h-3.5 w-3.5 bg-black border-zinc-800 rounded-none">
+                <label for="remember" class="text-[9px] text-gray-400 tracking-wider cursor-pointer select-none">
+                    Mantener sesión activa en este dispositivo seguro
+                </label>
+            </div>
+
+            <!-- Acción de envío -->
+            <button type="submit" class="w-full btn-neon py-3 text-xs flex items-center justify-center space-x-2">
+                <span>Ingresar a mi cuenta</span>
+                <span class="text-sm">➔</span>
+            </button>
+        </form>
+
+        <div class="relative flex py-1 items-center text-[9px] text-gray-600 justify-center tracking-widest">
+            [ O CONTINUAR CON ]
+        </div>
+
+        <!-- Login Alternativo -->
+        <div class="grid grid-cols-2 gap-4">
+            <button class="btn-oauth text-[10px] tracking-wider py-2.5 font-bold flex items-center justify-center space-x-1.5">
+                <span class="font-mono text-xs">G</span>
+                <span class="text-gray-400">GOOGLE // OAUTH</span>
+            </button>
+            <button class="btn-oauth text-[10px] tracking-wider py-2.5 font-bold flex items-center justify-center space-x-1.5">
+                <span class="text-xs"></span>
+                <span class="text-gray-400">APPLE // CONNECT</span>
+            </button>
+        </div>
+
+        <!-- Registro Alterno -->
+        <div class="border-t border-zinc-800 pt-4 flex justify-between items-center text-[10px]">
+            <div class="normal-case max-w-[200px]">
+                <p class="text-gray-500 font-bold uppercase mb-0.5">¿Aún no tienes identificador?</p>
